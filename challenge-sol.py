@@ -18,4 +18,4 @@ def say_endpoint():
 
 
 # Run on all IPs
-app.run("0.0.0.0", 81)
+app.run("0.0.0.0", 81, threaded=False)
