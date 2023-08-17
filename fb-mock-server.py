@@ -81,6 +81,11 @@ def add_friend():
     return f"Successfully added friend: [{new_friend['name']}]", 200 # OK!
 
 
+@app.route("/friends/get/<int:friend_no>", methods=['GET'])
+def friends_get_from_number(friend_no):
+    return jsonify(friends[friend_no]), 200
+
+
 # Parameter converters: int, string, float
 @app.route("/friends/delete/<int:idx>", methods=["DELETE"])
 def del_friend(idx: int):
